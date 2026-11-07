@@ -8,11 +8,13 @@ buying list, prep tasks and internal menu together.
 Built for the Flip the Switch **Best Business Workflow** track. The supplied
 Swiggy/Zomato-style exports, brands, markets, prices and shifts are synthetic.
 
-[Watch the narrated drill](demo/kitchen-shift.mp4). The video is an edited
-graphic walkthrough of a real local Switch run. The corresponding
+[Watch the animated demo](demo/kitchen-shift-animated.mp4). The 68-second video
+uses an illustrated kitchen, animated orders and ingredients, timed buying and
+prep lists, narration, original background audio and transitions. It reconstructs
+the verified local Switch workflow using synthetic kitchen data. The corresponding
 [verified run](demo/verified-run.json) records the room, thread and output
-totals. It is not a continuous screen recording. The local demo page provides
-an interactive view of the same workflow.
+totals. [Captions are included](demo/kitchen-shift-animated.srt). The local demo
+page provides an interactive view of the same workflow.
 
 ## Run a kitchen shift
 

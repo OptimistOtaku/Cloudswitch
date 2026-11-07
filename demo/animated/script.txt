@@ -1,0 +1,18 @@
+Dinner is three hours away, and your kitchen is already losing control.
+Orders are coming in across two brands.
+But your Chinese cook is on leave.
+Kitchen Shift connects orders, stock, market hours, and your team's availability.
+It builds a buying list and a prep plan your available cooks can actually deliver.
+Then the buyer messages the group: Main Market is out of green chillies.
+Kitchen Shift checks another market, asks for stock confirmation, and recalculates.
+The emergency trip costs eighteen hundred rupees, so forecast demand alone cannot justify it.
+Then eighteen confirmed paneer bowl orders arrive.
+Now fulfilling those orders changes the decision.
+The owner sees the costs and approves inside the same Switch thread.
+The buyer gets two kilos of paneer and two hundred fifty grams of chillies.
+Asha gets eighteen bowls to prep, from five until six.
+The menu operator sees exactly which dishes to pause.
+One approved version keeps the whole team working from the same plan.
+At closing, record what sold, what carried over, and what was discarded.
+This animated demo follows a real Switch run with synthetic kitchen data.
+Kitchen Shift helps your team turn daily decisions into a more profitable shift.

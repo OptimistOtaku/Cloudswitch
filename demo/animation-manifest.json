@@ -1,0 +1,29 @@
+{
+  "style": "Illustrated 2D animation",
+  "shots": 18,
+  "fps": 30,
+  "resolution": "1280x720",
+  "duration_seconds": 67.56,
+  "audio": "Narration, original synthesized score and transition sound design",
+  "disclosure": "Animated reconstruction of the verified local Switch workflow using synthetic kitchen data.",
+  "cuts": [
+    0.08,
+    4.061,
+    6.348,
+    8.522,
+    12.861,
+    17.043,
+    20.765,
+    25.339,
+    30.643,
+    33.6,
+    36.287,
+    40.026,
+    43.939,
+    47.339,
+    50.478,
+    54.026,
+    58.574,
+    62.635
+  ]
+}
