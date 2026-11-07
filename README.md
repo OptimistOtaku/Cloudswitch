@@ -55,8 +55,9 @@ version**.
   <a href="demo/verified-run.json">Recorded run evidence</a>
 </p>
 
-The video combines an illustrated kitchen with accelerated recordings of the
-actual Mattermost conversation and operating-plan interface. The demo uses
+The video includes narration-synchronized captions and combines an illustrated
+kitchen with accelerated recordings of the actual Mattermost conversation and
+operating-plan interface. The demo uses
 sample merchant exports, prices, and kitchen records.
 
 ### One dinner shift, three different plans

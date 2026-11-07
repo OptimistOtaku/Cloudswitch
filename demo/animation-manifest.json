@@ -121,5 +121,14 @@
       "start": 73.8014376,
       "key": "made-switch"
     }
-  ]
+  ],
+  "captions": {
+    "type": "Burned-in plus SRT and ASS sidecars",
+    "cues": 22,
+    "font": "Segoe UI Semibold",
+    "font_size_px": 32,
+    "placement": "Dedicated lower strip, full uncropped video above",
+    "timing": "Narration sentence boundaries, overlaps removed",
+    "animation": "80 ms fade in, 60 ms fade out, warm accent on key phrases"
+  }
 }

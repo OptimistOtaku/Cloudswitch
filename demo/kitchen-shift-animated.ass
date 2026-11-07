@@ -1,0 +1,36 @@
+[Script Info]
+Title: Cloudswitch — narration captions
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Caption,Segoe UI Semibold,32,&H00E5F1F6,&H0084C5F4,&H00192712,&H00192712,-1,0,0,0,100,100,0,0,1,0.5,0,5,48,48,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.10,0:00:03.16,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Running a {\c&H0084C5F4&}cloud kitchen{\c&H00E5F1F6&} can be chaos.
+Dialogue: 0,0:00:03.16,0:00:05.13,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}{\c&H0084C5F4&}Orders{\c&H00E5F1F6&} pile up.
+Dialogue: 0,0:00:05.13,0:00:07.32,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}{\c&H0084C5F4&}Ingredients{\c&H00E5F1F6&} run out.
+Dialogue: 0,0:00:07.32,0:00:10.82,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}And rushed decisions can eat into your {\c&H0084C5F4&}margin{\c&H00E5F1F6&}.
+Dialogue: 0,0:00:10.82,0:00:12.80,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Meet {\c&H0084C5F4&}Cloudswitch{\c&H00E5F1F6&}.
+Dialogue: 0,0:00:12.80,0:00:16.82,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Your {\c&H0084C5F4&}AI teammate{\c&H00E5F1F6&}, right in the kitchen group chat.
+Dialogue: 0,0:00:17.32,0:00:22.70,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}It reads your orders, stock, market hours, and cook availability.
+Dialogue: 0,0:00:22.70,0:00:26.45,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Then it builds a practical {\c&H0084C5F4&}buying and prep plan{\c&H00E5F1F6&}.
+Dialogue: 0,0:00:27.06,0:00:31.08,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Ravi reports that {\c&H0084C5F4&}green chillies{\c&H00E5F1F6&} are out of stock.
+Dialogue: 0,0:00:31.08,0:00:33.83,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}{\c&H0084C5F4&}Cloudswitch{\c&H00E5F1F6&} checks the options.
+Dialogue: 0,0:00:33.83,0:00:38.49,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}The extra trip is {\c&H0084C5F4&}too expensive{\c&H00E5F1F6&} for forecast demand alone.
+Dialogue: 0,0:00:39.20,0:00:43.27,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Then {\c&H0084C5F4&}eighteen confirmed{\c&H00E5F1F6&} paneer bowl orders arrive.
+Dialogue: 0,0:00:43.27,0:00:45.80,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Now the {\c&H0084C5F4&}plan changes{\c&H00E5F1F6&}.
+Dialogue: 0,0:00:45.80,0:00:50.12,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Neha checks the costs, and {\c&H0084C5F4&}approves{\c&H00E5F1F6&} in the same thread.
+Dialogue: 0,0:00:50.94,0:00:53.44,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Ravi gets the {\c&H0084C5F4&}buying list{\c&H00E5F1F6&}.
+Dialogue: 0,0:00:53.44,0:00:58.08,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Asha gets {\c&H0084C5F4&}eighteen bowls{\c&H00E5F1F6&} to prep, from five to six.
+Dialogue: 0,0:00:58.08,0:01:02.07,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}The menu operator sees which dishes to {\c&H0084C5F4&}pause{\c&H00E5F1F6&}.
+Dialogue: 0,0:01:02.07,0:01:05.46,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Everyone works from {\c&H0084C5F4&}one approved plan{\c&H00E5F1F6&}.
+Dialogue: 0,0:01:06.12,0:01:08.63,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Fewer rushed decisions.
+Dialogue: 0,0:01:08.63,0:01:12.14,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}A clearer path to a {\c&H0084C5F4&}profitable kitchen{\c&H00E5F1F6&}.
+Dialogue: 0,0:01:12.14,0:01:13.80,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}{\c&H0084C5F4&}Cloudswitch{\c&H00E5F1F6&}.
+Dialogue: 0,0:01:13.80,0:01:15.84,Caption,,0,0,0,,{\an5\pos(640,684)\fad(80,60)}Made with {\c&H0084C5F4&}Switch{\c&H00E5F1F6&}.

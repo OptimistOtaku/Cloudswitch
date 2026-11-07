@@ -1,5 +1,5 @@
 1
-00:00:00,100 --> 00:00:03,212
+00:00:00,100 --> 00:00:03,162
 Running a cloud kitchen can be chaos.
 
 2
@@ -23,7 +23,7 @@ Meet Cloudswitch.
 Your AI teammate, right in the kitchen group chat.
 
 7
-00:00:17,322 --> 00:00:22,757
+00:00:17,322 --> 00:00:22,707
 It reads your orders, stock, market hours, and cook availability.
 
 8
@@ -31,7 +31,7 @@ It reads your orders, stock, market hours, and cook availability.
 Then it builds a practical buying and prep plan.
 
 9
-00:00:27,060 --> 00:00:31,130
+00:00:27,060 --> 00:00:31,080
 Ravi reports that green chillies are out of stock.
 
 10
@@ -43,7 +43,7 @@ Cloudswitch checks the options.
 The extra trip is too expensive for forecast demand alone.
 
 12
-00:00:39,202 --> 00:00:43,327
+00:00:39,202 --> 00:00:43,277
 Then eighteen confirmed paneer bowl orders arrive.
 
 13
@@ -55,7 +55,7 @@ Now the plan changes.
 Neha checks the costs, and approves in the same thread.
 
 15
-00:00:50,940 --> 00:00:53,493
+00:00:50,940 --> 00:00:53,443
 Ravi gets the buying list.
 
 16
@@ -71,7 +71,7 @@ The menu operator sees which dishes to pause.
 Everyone works from one approved plan.
 
 19
-00:01:06,128 --> 00:01:08,682
+00:01:06,128 --> 00:01:08,632
 Fewer rushed decisions.
 
 20
