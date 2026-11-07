@@ -1,6 +1,6 @@
-# Kitchen Shift
+# Cloudswitch
 
-A buyer reports a stockout in the team room. Kitchen Shift checks which dishes
+A buyer reports a stockout in the team room. Cloudswitch checks which dishes
 it affects, whether another market is reachable, what the trip costs, and what
 the available cooks can prepare. The owner approves a version that updates the
 buying list, prep tasks and internal menu together.
@@ -8,14 +8,17 @@ buying list, prep tasks and internal menu together.
 Built for the Flip the Switch **Best Business Workflow** track. The supplied
 Swiggy/Zomato-style exports, brands, markets, prices and shifts are synthetic.
 
-[Watch the demo](demo/kitchen-shift-animated.mp4). The 69-second video combines
+[Watch the demo](demo/kitchen-shift-animated.mp4). The 78-second video combines
 accelerated screen recordings of the actual Mattermost conversation and approved
 operating plan with an illustrated kitchen, moving characters, pop-up chat bubbles,
-narration and sound design. Neha Mehta owns the shift, Ravi Sharma buys ingredients,
+naturally paced Indian narration and sound design. The opening uses fast illustrated
+cuts, and the final frame credits Switch with its official mark. Neha Mehta owns the shift, Ravi Sharma buys ingredients,
 and Asha Rao cooks. The workflow uses sample kitchen data. The corresponding
 [verified run](demo/verified-run.json) records the room, thread and output
 totals. [Captions are included](demo/kitchen-shift-animated.srt). The local demo
 page provides an interactive view of the same workflow.
+
+The Switch mark comes from the [official Switch repository](https://github.com/sandbox-quantum/switch/blob/main/gateway/public/switch_logo_light.svg).
 
 ## Run a kitchen shift
 

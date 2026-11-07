@@ -3,7 +3,7 @@
   <meta charset="utf-8" /><meta
     name="viewport"
     content="width=device-width, initial-scale=1"
-  /><title>Kitchen Shift</title>
+  /><title>Cloudswitch</title>
   <style>
     :root {
       color: #252b25;
@@ -223,7 +223,7 @@
     }
   </style>
   <header>
-    <strong>Kitchen Shift</strong
+    <strong>Cloudswitch</strong
     ><span class="tag">Local drill · synthetic data</span>
   </header>
   <main>
@@ -407,7 +407,7 @@
         let data = await r.json();
         if (!r.ok) throw Error(data.error);
         draw(data.result);
-        message("Kitchen Shift", data.text);
+        message("Cloudswitch", data.text);
       } catch (e) {
         el("error").textContent = e.message;
       } finally {

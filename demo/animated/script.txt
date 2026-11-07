@@ -1,18 +1,11 @@
-Dinner is three hours away, and your kitchen is already losing control.
-Orders are coming in across two brands.
-But Manoj, your Chinese cook, is on leave.
-Kitchen Shift connects orders, stock, market hours, and your team's availability.
-It builds a buying list and a prep plan Asha can actually deliver.
-Then Ravi messages the group: Main Market is out of green chillies.
-The agent checks another market, asks Ravi to confirm stock, and recalculates.
-The emergency trip costs eighteen hundred rupees, so forecast demand alone cannot justify it.
-Then Ravi confirms stock and eighteen paneer bowl orders for dinner.
-Fulfilling those confirmed orders changes the decision.
-Neha reviews the costs and approves inside the same Switch thread.
-Ravi gets two kilos of paneer and two hundred fifty grams of chillies.
-Asha Rao gets eighteen bowls to prep, from five until six.
-The menu operator sees exactly which dishes to pause.
-One approved version keeps the whole team working from the same plan.
-At closing, record what sold, what carried over, and what was discarded.
-The workflow runs through Mattermost, Switch, and a real coding agent.
-Kitchen Shift helps your team turn daily decisions into a more profitable shift.
+Running a cloud kitchen can be chaos. Orders pile up. Ingredients run out. And rushed decisions can eat into your margin. Meet Cloudswitch. Your AI teammate, right in the kitchen group chat.
+
+It reads your orders, stock, market hours, and cook availability. Then it builds a practical buying and prep plan.
+
+Ravi reports that green chillies are out of stock. Cloudswitch checks the options. The extra trip is too expensive for forecast demand alone.
+
+Then eighteen confirmed paneer bowl orders arrive. Now the plan changes. Neha checks the costs, and approves in the same thread.
+
+Ravi gets the buying list. Asha gets eighteen bowls to prep, from five to six. The menu operator sees which dishes to pause. Everyone works from one approved plan.
+
+Fewer rushed decisions. A clearer path to a profitable kitchen. Cloudswitch. Made with Switch.

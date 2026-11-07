@@ -1,71 +1,87 @@
 1
-00:00:00,080 --> 00:00:04,101
-Dinner is three hours away, and your kitchen is already losing control.
+00:00:00,100 --> 00:00:03,212
+Running a cloud kitchen can be chaos.
 
 2
-00:00:04,061 --> 00:00:06,348
-Orders are coming in across two brands.
+00:00:03,162 --> 00:00:05,135
+Orders pile up.
 
 3
-00:00:06,348 --> 00:00:09,122
-But Manoj, your Chinese cook, is on leave.
+00:00:05,135 --> 00:00:07,328
+Ingredients run out.
 
 4
-00:00:09,122 --> 00:00:13,461
-Kitchen Shift connects orders, stock, market hours, and your team's availability.
+00:00:07,328 --> 00:00:10,821
+And rushed decisions can eat into your margin.
 
 5
-00:00:13,461 --> 00:00:17,104
-It builds a buying list and a prep plan Asha can actually deliver.
+00:00:10,821 --> 00:00:12,806
+Meet Cloudswitch.
 
 6
-00:00:17,104 --> 00:00:20,722
-Then Ravi messages the group: Main Market is out of green chillies.
+00:00:12,806 --> 00:00:16,826
+Your AI teammate, right in the kitchen group chat.
 
 7
-00:00:20,722 --> 00:00:25,322
-The agent checks another market, asks Ravi to confirm stock, and recalculates.
+00:00:17,322 --> 00:00:22,757
+It reads your orders, stock, market hours, and cook availability.
 
 8
-00:00:25,322 --> 00:00:30,626
-The emergency trip costs eighteen hundred rupees, so forecast demand alone cannot justify it.
+00:00:22,707 --> 00:00:26,457
+Then it builds a practical buying and prep plan.
 
 9
-00:00:30,626 --> 00:00:34,583
-Then Ravi confirms stock and eighteen paneer bowl orders for dinner.
+00:00:27,060 --> 00:00:31,130
+Ravi reports that green chillies are out of stock.
 
 10
-00:00:34,583 --> 00:00:37,539
-Fulfilling those confirmed orders changes the decision.
+00:00:31,080 --> 00:00:33,835
+Cloudswitch checks the options.
 
 11
-00:00:37,539 --> 00:00:41,122
-Neha reviews the costs and approves inside the same Switch thread.
+00:00:33,835 --> 00:00:38,491
+The extra trip is too expensive for forecast demand alone.
 
 12
-00:00:41,122 --> 00:00:44,904
-Ravi gets two kilos of paneer and two hundred fifty grams of chillies.
+00:00:39,202 --> 00:00:43,327
+Then eighteen confirmed paneer bowl orders arrive.
 
 13
-00:00:44,904 --> 00:00:48,461
-Asha Rao gets eighteen bowls to prep, from five until six.
+00:00:43,277 --> 00:00:45,803
+Now the plan changes.
 
 14
-00:00:48,461 --> 00:00:51,600
-The menu operator sees exactly which dishes to pause.
+00:00:45,803 --> 00:00:50,120
+Neha checks the costs, and approves in the same thread.
 
 15
-00:00:51,600 --> 00:00:55,148
-One approved version keeps the whole team working from the same plan.
+00:00:50,940 --> 00:00:53,493
+Ravi gets the buying list.
 
 16
-00:00:55,148 --> 00:00:59,696
-At closing, record what sold, what carried over, and what was discarded.
+00:00:53,443 --> 00:00:58,082
+Asha gets eighteen bowls to prep, from five to six.
 
 17
-00:00:59,696 --> 00:01:03,557
-The workflow runs through Mattermost, Switch, and a real coding agent.
+00:00:58,082 --> 00:01:02,077
+The menu operator sees which dishes to pause.
 
 18
-00:01:03,557 --> 00:01:07,678
-Kitchen Shift helps your team turn daily decisions into a more profitable shift.
+00:01:02,077 --> 00:01:05,466
+Everyone works from one approved plan.
+
+19
+00:01:06,128 --> 00:01:08,682
+Fewer rushed decisions.
+
+20
+00:01:08,632 --> 00:01:12,148
+A clearer path to a profitable kitchen.
+
+21
+00:01:12,148 --> 00:01:13,801
+Cloudswitch.
+
+22
+00:01:13,801 --> 00:01:15,846
+Made with Switch.

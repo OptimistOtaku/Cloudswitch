@@ -19,7 +19,7 @@ def render(response):
     plan = response["plan"]
     economics = plan["economics"]
     lines = [
-        f"### Kitchen Shift · {'Approved version ' + str(plan['version']) if kind == 'approved' else 'Proposal ' + response['proposal_id']}",
+        f"### Cloudswitch · {'Approved version ' + str(plan['version']) if kind == 'approved' else 'Proposal ' + response['proposal_id']}",
         f"Expected contribution **{money(economics['expected_contribution'])}** after ingredients, packaging, fees, discounts and market trips.",
         f"Purchase surplus at risk: {money(economics['purchase_surplus_cost_at_risk'])}. Batch leftovers: {sum(r['expected_leftover_portions'] for r in plan['prep'])} portions.",
     ]

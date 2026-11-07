@@ -9,7 +9,7 @@ from .presentation import render, export
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Kitchen Shift — cloud kitchen operating plans"
+        description="Cloudswitch — cloud kitchen operating plans"
     )
     parser.add_argument("--data", type=Path, default=Path("data"))
     commands = parser.add_subparsers(dest="command", required=True)

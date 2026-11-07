@@ -1,35 +1,125 @@
 {
-  "duration_seconds": 68.48,
-  "resolution": "1280x720",
+  "product": "Cloudswitch",
+  "duration_seconds": 77.92,
   "fps": 30,
-  "scenes": 18,
-  "screen_recording_scenes": 8,
-  "participants": {
-    "owner": "Neha Mehta",
-    "buyer": "Ravi Sharma",
-    "chef": "Asha Rao"
-  },
-  "recording": "Actual local Mattermost and Kitchen Shift interface captures, edited and accelerated.",
-  "data": "Sample kitchen data; projected contribution shown separately from actual results.",
-  "motion": "Articulated chef, illustrated crew movement, steam, orders, pop-up chat bubbles, transition sound design.",
+  "resolution": "1280x720",
+  "scenes": 28,
+  "recording": "Actual local Mattermost and project screen captures; screen footage selectively accelerated.",
+  "voice": "Expressive Indian English narration at natural rate, measured pauses between decisions, speech-triggered music ducking.",
+  "ending": "Made with Switch, using the official Switch repository logo.",
+  "sample_kitchen_data": true,
   "cuts": [
-    0.0,
-    4.061,
-    6.348,
-    9.122,
-    13.461,
-    17.104,
-    20.722,
-    25.322,
-    30.626,
-    34.583,
-    37.539,
-    41.122,
-    44.904,
-    48.461,
-    51.6,
-    55.148,
-    59.696,
-    63.557
+    {
+      "start": 0.0,
+      "key": "hook-kitchen"
+    },
+    {
+      "start": 0.45168067142857143,
+      "key": "hook-orders"
+    },
+    {
+      "start": 0.9033613428571429,
+      "key": "hook-cook"
+    },
+    {
+      "start": 1.3550420142857145,
+      "key": "hook-chilli"
+    },
+    {
+      "start": 1.8067226857142857,
+      "key": "hook-margin"
+    },
+    {
+      "start": 2.258403357142857,
+      "key": "hook-orders"
+    },
+    {
+      "start": 2.710084028571429,
+      "key": "hook-kitchen"
+    },
+    {
+      "start": 3.1617647,
+      "key": "orders"
+    },
+    {
+      "start": 5.134804,
+      "key": "hook-chilli"
+    },
+    {
+      "start": 7.3284315,
+      "key": "hook-margin"
+    },
+    {
+      "start": 10.8210786,
+      "key": "meet"
+    },
+    {
+      "start": 12.8063727,
+      "key": "buddy"
+    },
+    {
+      "start": 17.322000000000003,
+      "key": "connect"
+    },
+    {
+      "start": 22.706693700000002,
+      "key": "initial"
+    },
+    {
+      "start": 27.060000000000002,
+      "key": "message"
+    },
+    {
+      "start": 31.0798978,
+      "key": "market"
+    },
+    {
+      "start": 33.8349998,
+      "key": "trip"
+    },
+    {
+      "start": 39.202000000000005,
+      "key": "catering"
+    },
+    {
+      "start": 43.2772573,
+      "key": "decision"
+    },
+    {
+      "start": 45.8030303,
+      "key": "approval"
+    },
+    {
+      "start": 50.940000000000005,
+      "key": "buying"
+    },
+    {
+      "start": 53.443092500000006,
+      "key": "prep"
+    },
+    {
+      "start": 58.082267300000005,
+      "key": "menu"
+    },
+    {
+      "start": 62.0771123,
+      "key": "sync"
+    },
+    {
+      "start": 66.128,
+      "key": "closing"
+    },
+    {
+      "start": 68.6321667,
+      "key": "benefit"
+    },
+    {
+      "start": 72.14779180000001,
+      "key": "cloud-brand"
+    },
+    {
+      "start": 73.8014376,
+      "key": "made-switch"
+    }
   ]
 }
