@@ -8,10 +8,11 @@ buying list, prep tasks and internal menu together.
 Built for the Flip the Switch **Best Business Workflow** track. The supplied
 Swiggy/Zomato-style exports, brands, markets, prices and shifts are synthetic.
 
-[Watch the animated demo](demo/kitchen-shift-animated.mp4). The 68-second video
-uses an illustrated kitchen, animated orders and ingredients, timed buying and
-prep lists, narration, original background audio and transitions. It reconstructs
-the verified local Switch workflow using synthetic kitchen data. The corresponding
+[Watch the demo](demo/kitchen-shift-animated.mp4). The 69-second video combines
+accelerated screen recordings of the actual Mattermost conversation and approved
+operating plan with an illustrated kitchen, moving characters, pop-up chat bubbles,
+narration and sound design. Neha Mehta owns the shift, Ravi Sharma buys ingredients,
+and Asha Rao cooks. The workflow uses sample kitchen data. The corresponding
 [verified run](demo/verified-run.json) records the room, thread and output
 totals. [Captions are included](demo/kitchen-shift-animated.srt). The local demo
 page provides an interactive view of the same workflow.

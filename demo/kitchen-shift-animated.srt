@@ -7,65 +7,65 @@ Dinner is three hours away, and your kitchen is already losing control.
 Orders are coming in across two brands.
 
 3
-00:00:06,348 --> 00:00:08,522
-But your Chinese cook is on leave.
+00:00:06,348 --> 00:00:09,122
+But Manoj, your Chinese cook, is on leave.
 
 4
-00:00:08,522 --> 00:00:12,861
+00:00:09,122 --> 00:00:13,461
 Kitchen Shift connects orders, stock, market hours, and your team's availability.
 
 5
-00:00:12,861 --> 00:00:17,043
-It builds a buying list and a prep plan your available cooks can actually deliver.
+00:00:13,461 --> 00:00:17,104
+It builds a buying list and a prep plan Asha can actually deliver.
 
 6
-00:00:17,043 --> 00:00:20,765
-Then the buyer messages the group: Main Market is out of green chillies.
+00:00:17,104 --> 00:00:20,722
+Then Ravi messages the group: Main Market is out of green chillies.
 
 7
-00:00:20,765 --> 00:00:25,339
-Kitchen Shift checks another market, asks for stock confirmation, and recalculates.
+00:00:20,722 --> 00:00:25,322
+The agent checks another market, asks Ravi to confirm stock, and recalculates.
 
 8
-00:00:25,339 --> 00:00:30,643
+00:00:25,322 --> 00:00:30,626
 The emergency trip costs eighteen hundred rupees, so forecast demand alone cannot justify it.
 
 9
-00:00:30,643 --> 00:00:33,600
-Then eighteen confirmed paneer bowl orders arrive.
+00:00:30,626 --> 00:00:34,583
+Then Ravi confirms stock and eighteen paneer bowl orders for dinner.
 
 10
-00:00:33,600 --> 00:00:36,287
-Now fulfilling those orders changes the decision.
+00:00:34,583 --> 00:00:37,539
+Fulfilling those confirmed orders changes the decision.
 
 11
-00:00:36,287 --> 00:00:40,026
-The owner sees the costs and approves inside the same Switch thread.
+00:00:37,539 --> 00:00:41,122
+Neha reviews the costs and approves inside the same Switch thread.
 
 12
-00:00:40,026 --> 00:00:43,939
-The buyer gets two kilos of paneer and two hundred fifty grams of chillies.
+00:00:41,122 --> 00:00:44,904
+Ravi gets two kilos of paneer and two hundred fifty grams of chillies.
 
 13
-00:00:43,939 --> 00:00:47,339
-Asha gets eighteen bowls to prep, from five until six.
+00:00:44,904 --> 00:00:48,461
+Asha Rao gets eighteen bowls to prep, from five until six.
 
 14
-00:00:47,339 --> 00:00:50,478
+00:00:48,461 --> 00:00:51,600
 The menu operator sees exactly which dishes to pause.
 
 15
-00:00:50,478 --> 00:00:54,026
+00:00:51,600 --> 00:00:55,148
 One approved version keeps the whole team working from the same plan.
 
 16
-00:00:54,026 --> 00:00:58,574
+00:00:55,148 --> 00:00:59,696
 At closing, record what sold, what carried over, and what was discarded.
 
 17
-00:00:58,574 --> 00:01:02,635
-This animated demo follows a real Switch run with synthetic kitchen data.
+00:00:59,696 --> 00:01:03,557
+The workflow runs through Mattermost, Switch, and a real coding agent.
 
 18
-00:01:02,635 --> 00:01:06,757
+00:01:03,557 --> 00:01:07,678
 Kitchen Shift helps your team turn daily decisions into a more profitable shift.

@@ -1,13 +1,19 @@
 {
-  "synthetic": true,
-  "root_post": "wsqim8stgjg4t8ztupgzpcnjke",
-  "room_id": "e491c9cc-723a-4b15-860a-d8e6ccc4779c",
-  "contributions": [
+  "sample_kitchen_data": true,
+  "room_id": "67843691-83ab-4f54-b921-b72b2362c167",
+  "root_post": "39x4tee3kfgy8ffamwkccf8r7a",
+  "execution": "Actual local Mattermost conversation, Switch event delivery, Codex interpretation, deterministic planning and Neha Mehta approval.",
+  "participants": {
+    "owner": "Neha Mehta",
+    "buyer": "Ravi Sharma",
+    "chef": "Asha Rao"
+  },
+  "contribution_paise": [
     237540,
     39500,
     51560
   ],
-  "version": 1,
+  "approved_version": 1,
   "threaded_approval_seen": true,
-  "description": "Actual local Mattermost \u2192 Switch \u2192 Codex \u2192 threaded proposal \u2192 human demo approval. All kitchen data synthetic."
+  "actual_results": "Projected contribution is distinct from measured sales and waste."
 }
