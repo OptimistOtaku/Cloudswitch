@@ -1,168 +1,314 @@
-# Cloudswitch
+<p align="center">
+  <img src="docs/assets/cover.png" alt="Cloudswitch — your kitchen’s AI teammate" width="1200" />
+</p>
 
-A buyer reports a stockout in the team room. Cloudswitch checks which dishes
-it affects, whether another market is reachable, what the trip costs, and what
-the available cooks can prepare. The owner approves a version that updates the
-buying list, prep tasks and internal menu together.
+<p align="center">
+  <strong>Turn a message from the kitchen into a revised buying list, prep schedule, and menu plan.</strong>
+</p>
 
-Built for the Flip the Switch **Best Business Workflow** track. The supplied
-Swiggy/Zomato-style exports, brands, markets, prices and shifts are synthetic.
+<p align="center">
+  <a href="#watch-the-workflow">Watch the demo</a> ·
+  <a href="#the-innovation">The innovation</a> ·
+  <a href="#run-it-locally">Run it locally</a> ·
+  <a href="#connect-your-switch-room">Connect Switch</a>
+</p>
 
-[Watch the demo](demo/kitchen-shift-animated.mp4). The 78-second video combines
-accelerated screen recordings of the actual Mattermost conversation and approved
-operating plan with an illustrated kitchen, moving characters, pop-up chat bubbles,
-naturally paced Indian narration and sound design. The opening uses fast illustrated
-cuts, and the final frame credits Switch with its official mark. Neha Mehta owns the shift, Ravi Sharma buys ingredients,
-and Asha Rao cooks. The workflow uses sample kitchen data. The corresponding
-[verified run](demo/verified-run.json) records the room, thread and output
-totals. [Captions are included](demo/kitchen-shift-animated.srt). The local demo
-page provides an interactive view of the same workflow.
+## The problem
 
-The Switch mark comes from the [official Switch repository](https://github.com/sandbox-quantum/switch/blob/main/gateway/public/switch_logo_light.svg).
+A cloud kitchen can have the food, the menu, and the cooks, while still losing
+money through the decisions between them.
 
-## Run a kitchen shift
+Order history lives in delivery-app exports. Ingredient prices sit in another
+sheet. Cook availability arrives in a message. The buyer discovers a stockout
+at the market. Each update changes what the kitchen can sell, buy, and prepare.
+Someone has to connect those facts before the next batch starts cooking.
 
-Python 3.11+ is sufficient. The planner, storage, tests and web interface use
-the standard library. Run these commands from this directory.
+**A group message can tell everyone that the chillies are unavailable. The
+team still needs a revised plan.** Which dishes depend on them? Can another
+market supply them in time? Does the extra trip make financial sense? Who can
+cook the replacement menu?
+
+Cloudswitch brings that work into the team’s Switch room.
+
+## What the team gets
+
+| Neha Mehta · owner | Ravi Sharma · buyer | Asha Rao · chef |
+| --- | --- | --- |
+| A feasible menu, expected contribution, and the tradeoffs behind each proposed change. | One shopping list grouped by market, with shared ingredients counted once, costs, and purchase deadlines. | A prep list matched to available cooks, with quantities and start and finish times. |
+
+The team reports what changed. Cloudswitch interprets the update, checks the
+kitchen’s data, and proposes a new plan. The owner approves it in the same
+thread. Buying, prep, and internal menu availability become **one approved
+version**.
+
+## Watch the workflow
+
+<p align="center">
+  <a href="https://github.com/OptimistOtaku/Cloudswitch/raw/refs/heads/codex/kitchen-shift/demo/kitchen-shift-animated.mp4">
+    <img src="docs/assets/demo-preview.png" alt="Watch Cloudswitch’s 78-second demo showing Neha’s chat approval and the saved plan" width="1100" />
+  </a>
+</p>
+
+<p align="center">
+  <a href="demo/kitchen-shift-animated.mp4"><strong>Watch the 78-second demo</strong></a> ·
+  <a href="demo/kitchen-shift-animated.srt">Captions</a> ·
+  <a href="demo/verified-run.json">Recorded run evidence</a>
+</p>
+
+The video combines an illustrated kitchen with accelerated recordings of the
+actual Mattermost conversation and operating-plan interface. The demo uses
+sample merchant exports, prices, and kitchen records.
+
+### One dinner shift, three different plans
+
+**Before the buyer leaves.** Friday dinner history suggests demand for Chinese
+dishes, but the cook qualified for that station is on leave. Cloudswitch
+identifies the conflict and plans dishes Asha can prepare.
+
+**At the market.** Ravi posts in the room.
+
+> **Ravi Sharma · buyer**
+>
+> Main market is out of fresh green chillies. I can reach East Market at 4:30 pm.
+
+Cloudswitch checks the affected recipes, market hours, travel time, and
+supplier availability. It asks Ravi to confirm stock at East Market and
+proposes a feasible menu while that fact is unresolved.
+
+**A confirmed order arrives.** Ravi confirms the chillies and reports 18
+confirmed paneer bowl orders. Fulfilling those orders changes the decision.
+Neha reviews the costs and approves the proposal in the same thread.
+
+| State of the shift | Expected contribution | Decision |
+| --- | ---: | --- |
+| Initial feasible menu | ₹2,375.40 | Plan four dishes covered by the available cook. |
+| Main Market stockout | ₹395.00 | Offer a smaller feasible menu and confirm alternative stock. |
+| Stock confirmed + 18 confirmed bowls | ₹515.60 | Make the extra trip and fulfil the confirmed orders. |
+
+**Ravi gets 2 kg of paneer and 250 g of chillies. Asha gets 18 bowls to prep
+from 17:00 to 18:00. The menu operator gets the dishes to offer or pause.**
+
+These are projected figures from the editable sample scenario. Its emergency
+trip costs ₹1,800. Contribution accounts for ingredients, discounts, platform
+fees, packaging, and market trips. Rent, salaries, utilities, tax, refunds,
+and cancellation penalties sit outside this calculation.
+
+## The innovation
+
+### A new fact changes the whole shift plan
+
+Cloudswitch connects an unstructured team message to structured kitchen work.
+A stockout can change ingredient purchases, feasible dishes, cook assignments,
+prep timing, and expected contribution in one proposal. The team can inspect
+the costs and constraints behind the recommendation.
+
+### The model understands the update. Code checks the numbers.
+
+The AI interprets messages such as “I can reach the other market by 4:30” and
+asks for missing facts. A deterministic planner calculates quantities and
+costs, combines shared ingredients, checks cook skills and time, and compares
+feasible menu options. Confirmed orders receive priority over forecast demand.
+
+### Approval creates a shared commitment
+
+The owner chooses the proposal in the room. One SQLite transaction saves its
+buying list, prep tasks, menu, and stock reservations together. Approval checks
+the owner’s exact sender identity, room, thread, and proposal revision.
+Repeated messages reuse their recorded result. An older proposal loses approval
+eligibility when new facts change the plan.
+
+## Why Switch is central
+
+```mermaid
+flowchart TB
+    Team["Ravi · Neha · Asha<br/>Updates, decisions, handoffs"]
+    Room["Switch room<br/>Connected to Mattermost"]
+    Agent["Cloudswitch agent<br/>Interpret the update and explain the options"]
+    Planner["Planner + SQLite<br/>Check facts, costs, constraints, and revisions"]
+    Approval["Owner approval in the same thread"]
+    Lists["One approved version<br/>Buying list · Prep schedule · Internal menu"]
+
+    Team <--> Room
+    Room <--> Agent
+    Agent <--> Planner
+    Room --> Approval
+    Approval --> Planner
+    Planner --> Lists
+
+    classDef room fill:#183b32,color:#f6f1e5,stroke:#183b32
+    classDef action fill:#b6d788,color:#183b32,stroke:#183b32
+    classDef normal fill:#f6f1e5,color:#183b32,stroke:#183b32
+    class Room room
+    class Approval,Lists action
+    class Team,Agent,Planner normal
+```
+
+The agent receives real Switch events, maintains its connection heartbeat,
+and posts threaded replies through Switch operations. The room and thread
+identify the proposal the owner can approve. That same conversation carries
+the buyer’s new facts and the chef’s handoff.
+
+## Run it locally
+
+**Python 3.11+** runs the planner, storage, tests, and local web interface using
+the standard library. Natural-language messages use a signed-in `codex` CLI
+on `PATH`, or a configured OpenAI-compatible Chat Completions endpoint.
 
 ```sh
+git clone https://github.com/OptimistOtaku/Cloudswitch.git
+cd Cloudswitch
+
 python -m kitchen.cli --data my-shift init
 python -m kitchen.cli --data my-shift plan
 python -m kitchen.cli --data my-shift web
 ```
 
-Open http://127.0.0.1:8787. Build the plan and report a market update. Natural
-language messages require an authenticated `codex` CLI on PATH. Alternatively
-set `KITCHEN_MODEL_BACKEND=openai`, `OPENAI_MODEL`, `OPENAI_API_KEY` and optionally
-`OPENAI_BASE_URL` for a compatible Chat Completions endpoint. There is no canned
-AI fallback. The page reports inference failures. Only its local rehearsal
-uses the demo identity selector. Real Switch approvals check the sender ID.
+Open [the local demo](http://127.0.0.1:8787). Build a plan, report a market
+update, and approve the revision. The local page provides demo role selection.
+The live Switch worker verifies identities from the actual chat events.
 
-An example of the complete drill is below. Use the same room thread for all
-updates and approvals.
+For a reproducible replay with fixed actions and expected outputs, run:
 
-1. Ask for the dinner plan. The Chinese cook is on leave. Four Indian dishes
-   remain feasible, with expected contribution **INR 2,375.40**.
-2. Report “Main market is out of green chillies. I can reach East Market at
-   4:30 pm.” The agent asks the buyer to confirm stock there. It proposes a
-   feasible menu without relying on unknown supplier availability.
-3. Report “East Market confirmed fresh green chillies are in stock.” The
-   emergency van trip costs INR 1,800 in this synthetic scenario. Forecast
-   demand alone does not justify it.
-4. Report “We have 18 confirmed paneer bowl orders in total for dinner.” The
-   planner now prioritizes fulfillment of these orders and recommends the trip.
-5. Reply `approve <proposal-id>` as the configured owner. One approved version
-   contains all three lists and the shared-stock reservation. Ask in another
-   thread, use an old proposal, or approve as the buyer to see rejection.
-6. Change East Market closing to 4 pm and request a new plan. The late trip
-   becomes infeasible and the confirmed orders are explicitly flagged.
+```sh
+python demo/replay.py
+```
 
-The emergency trip cost is an editable scenario assumption. Use supplier
-quotes, transport costs and prep times from a real kitchen before comparing
-operating decisions.
+It reproduces the three contribution totals above and saves an approved
+version with its buying, prep, and menu exports.
 
-## Connect the actual team room through Switch
+## Connect your Switch room
 
-1. Start [Switch Console](https://docs.switchagents.ai), its local server and
-   Mattermost. Create a dedicated kitchen room and an external agent named
-   `kitchen-shift`. Add it to that room with an integration profile supporting
-   incoming messages. Allow the kitchen team to address it.
-2. Copy the values in `.env.example` into your shell environment. This project
-   intentionally does not load any surrounding repository credentials. Obtain
-   exact opaque participant IDs using the agent's `connect_to_room` / room
-   context operation. Put the owner's ID in `KITCHEN_OWNER_ID` and permitted
-   buyer/cook IDs in `KITCHEN_TEAM_IDS`. Do not use display names as IDs.
-3. Use a **separate data directory** for the live room. Then run:
+1. Start Switch Console, its server, and Mattermost. Create a kitchen room and
+   an external agent named `kitchen-shift`. Add the agent and team to the room,
+   and configure the agent to accept their messages.
+2. Set the shell environment using the variables documented in
+   [`.env.example`](.env.example). Copy the agent’s bridge URL, ID, API key,
+   and the room’s ID from your Switch setup.
+3. Send an onboarding message from each person. Use the opaque `sender` IDs
+   in Switch’s authenticated room history for `KITCHEN_OWNER_ID` and
+   `KITCHEN_TEAM_IDS`. The owner’s ID must match the person approving plans.
+4. Initialize a separate directory for the live room, then start the worker.
 
 ```sh
 python -m kitchen.cli --data live-shift init
 python -m kitchen.cli --data live-shift switch
 ```
 
-The process receives Switch SSE messages, maintains the connection heartbeat,
-stores human messages in a durable inbox, calls the model, and posts a threaded
-proposal via Switch's `post_message` operation. Owner approval is parsed by code
-and checked against the configured owner, proposal revision, room and thread.
-The model cannot approve a plan. Model calls contain kitchen data and the
-human message, never the Switch credential.
+Keep the conversation in one thread. The owner can approve with
+`approve <proposal-id>` or select an offered alternative with
+`approve <proposal-id> option 1`.
 
-The legacy SSE transport is supported by the inspected Switch protocol. A
-server buffer gap is reported in the worker log and requires resending any
-unacknowledged update. Replies are at least once after an ambiguous network
-failure. Inbox and planning actions are idempotent by message ID.
+<details>
+<summary><strong>Connection variables and model configuration</strong></summary>
 
-## Data and calculations
+| Variable | Purpose |
+| --- | --- |
+| `SWITCH_URL` | Agent bridge base URL. |
+| `SWITCH_AGENT_ID` | Registered agent ID. |
+| `SWITCH_API_KEY` | Agent credential. |
+| `SWITCH_ROOM_ID` | Kitchen room ID. |
+| `KITCHEN_OWNER_ID` | Exact opaque sender ID permitted to approve. |
+| `KITCHEN_TEAM_IDS` | Comma-separated buyer, cook, and other permitted sender IDs. |
+| `KITCHEN_MODEL_BACKEND` | `codex` by default, or `openai`. |
 
-Edit `kitchen.json` **before the first run**, or use chat for supported facts
-after initialization. SQLite becomes the source of truth after initialization.
-`snapshot` shows the current facts, versions and closing records. Create a new
-data directory to start an independent scenario.
+For the compatible API backend, set `OPENAI_MODEL`, `OPENAI_API_KEY`, and
+optionally `OPENAI_BASE_URL`. Set these variables in the shell that starts
+the worker. `.env.example` is a configuration reference.
 
-`orders.csv` contains order ID, platform, dish, ISO timestamp with timezone,
-delivery zone, quantity, revenue, discount, fees and service. Money is integer
-INR paise, quantities integer grams. The importer rejects duplicate order lines.
-It averages each dish across prior matching weekdays and services, including
-zero-sale dishes on represented dates, and exposes those dates. A date with no
-rows at all cannot be distinguished from a missing export. Prices, discounts
-and platform fees used for the upcoming plan are configured in the dish table.
-CSV settlement amounts and delivery zones are retained for inspection. The
-prototype does not estimate zone-specific demand or live platform fees.
+The authenticated history endpoint used by the demo is
+`GET /agents/{agent_id}/rooms/{room_id}/history`. Human messages expose their
+sender IDs in `events[].sender`.
 
-The planner enumerates menu subsets and compares feasible plans. For each
-dish, target sales are the greater of forecast and total confirmed orders.
-Preparation rounds up to recipe batch size. It checks cook skills, serial
-workload, shift times, supplier availability, market arrival/closing times,
-travel time and stock use-by dates. Shared ingredients aggregate before buying.
-Existing stock is charged at its recorded cost, purchases at full pack cost,
-and trips once per market. Confirmed-order shortfall ranks before contribution.
-An infeasible order remains visible to the owner.
+The worker uses SSE with a generation-fenced heartbeat, a durable inbox,
+an outbox, and a resume cursor. An ambiguous network failure can result in a
+repeated reply. Planning actions are idempotent by message ID. A Switch buffer
+gap is reported in the log and requires resending unacknowledged updates.
 
-Contribution is revenue after kitchen-funded discounts, platform fees,
-packaging, ingredients and market trips. Rent, salaries, utilities, taxes,
-cancellation penalties and refunds are outside that calculation. Purchase
-surplus cost measures unallocated purchased stock at risk. Batch leftovers
-measure portions prepared above expected demand. Both are projections.
+[Switch quickstart and documentation](https://docs.switchagents.ai) ·
+[Agent protocol](https://github.com/sandbox-quantum/switch/blob/main/docs/official/internals/agent-protocol.md)
 
-This bounded planner compares whole-menu subsets. It uses a deterministic cook
-assignment and supplier selection, assumes prep before service and supports
-same-day market hours. It does not solve a globally optimal route, vary dish
-targets continuously, infer shelf life, or invent recipe substitutions.
+</details>
 
-## Approval, exports and actual closing
+## Data, exports, and closing the shift
 
-Run `plan`, `action` or `event` to export `artifacts/brief.md`, `plan.json`,
-`buying.csv`, `prep.csv` and `menu.csv`. The page also writes these exports.
-The internal menu sheet requires an operator to apply delivery-app changes.
-Run `snapshot` for the authoritative approved version. Proposed exports are
-labeled as proposals. One SQLite transaction saves each approved set of lists.
+| Input | Used for |
+| --- | --- |
+| Delivery-order CSV | Comparable weekday and service demand, with supporting dates. |
+| Recipes and batch sizes | Ingredient requirements and prepared portions. |
+| Stock, recorded cost, and use-by dates | Available inventory and allocations. |
+| Market quotes, hours, and travel time | Reachable suppliers, purchase costs, and deadlines. |
+| Cook skills, roster, and prep time | Feasible assignments before service. |
+| Total confirmed orders | Commitments the plan prioritizes fulfilling. |
 
-Record closing with `close <JSON>` as owner, listing every prepared dish:
+Edit `kitchen.json` before the first run. After initialization, SQLite holds
+the active facts and approved versions. Use chat for supported updates and
+`snapshot` to inspect the current state.
+
+Commands `plan`, `action`, and `event`, plus the local page, export
+`artifacts/brief.md`, `plan.json`, `buying.csv`, `prep.csv`, and `menu.csv`.
+The approved SQLite snapshot is the authoritative version.
+
+<details>
+<summary><strong>Calculation details and closing counts</strong></summary>
+
+The importer reads order ID, platform, dish, timestamp, zone, quantity,
+revenue, discount, fees, and service. It rejects duplicate order lines and
+averages prior matching weekdays and services, counting zero-sale dishes
+on represented dates. A fully absent date needs an operator’s interpretation
+as missing data or a zero-sales day. Upcoming prices, fees, and discounts
+come from the configured dish table.
+
+Dish target sales are the greater of forecast and total confirmed orders.
+Prep rounds up to recipe batch size. Shared ingredients aggregate before
+buying. Existing stock is charged at recorded cost, purchases at full pack
+cost, and trips once per market. Confirmed-order shortfall ranks ahead of
+expected contribution. Infeasible orders appear as an exception for the owner.
+
+At closing, record `sold`, `carried`, and `discarded` portions for every
+prepared dish. The three counts must balance to prepared portions. Closing
+is stored once per approved version.
 
 ```text
-close {"paneer-bowl":{"sold":5,"carried":0,"discarded":1},"veg-bowl":{"sold":6,"carried":0,"discarded":0},"paneer-wrap":{"sold":6,"carried":0,"discarded":0},"veg-wrap":{"sold":5,"carried":1,"discarded":0}}
+close {"paneer-bowl":{"sold":17,"carried":0,"discarded":1}}
 ```
 
-Each dish must balance to its prepared portions. Closing is stored once per
-approved version, separate from projected contribution. Actual financial
-margin requires settlement and purchase receipts. Raw inventory counts for
-the next shift must be supplied by the kitchen. Carried food needs the
-kitchen's own food-safety checks. A reservation alone earns no waste-saving
-claim.
+That example applies to the approved catering plan with 18 prepared paneer
+bowls. Closing records preserve actual counts separately from projections.
+Actual margin needs settlement and purchase receipts. The kitchen supplies
+fresh raw-stock counts for the next shift and checks carried food against
+its food-safety procedures.
 
-## Verify
+</details>
+
+## Verified behavior
 
 ```sh
 python -m unittest discover -s tests -v
 python demo/replay.py
 ```
 
-Tests cover cook absence, shared stock, known financial totals, unknown supplier
-stock, market closure, changed decisions after a confirmed order, expired stock,
-concurrent/repeated approval, rejected owner/thread/revision mismatches,
-transaction rollback and closing conservation. The inspected protocol source
-is [Switch's agent protocol](https://github.com/sandbox-quantum/switch/blob/main/docs/official/internals/agent-protocol.md).
+Seven tests cover cook absence, shared stock, known financial totals,
+unknown supplier stock, market closure, confirmed-order replanning, expired
+stock, alternative selection, concurrent and repeated approvals, identity and
+thread checks, stale proposals, rollback, and closing conservation. The
+recorded run also exercised actual Mattermost messages, Switch delivery,
+model interpretation, and threaded approval.
 
-The kitchen workflow uses standard Switch messaging and is independent of
-scheduler PR #1573. The project runs locally. A final submission needs its
-participant's review of the setup and claims, public repo and video links,
-and manual entry through the hackathon submission form.
+## Prototype scope
+
+This entry uses sample Swiggy/Zomato-style CSVs. An operator applies the
+internal menu’s availability changes to delivery apps. Upcoming planning
+prices, fees, and discounts come from editable kitchen records.
+
+The planner compares menu subsets at fixed dish targets, with deterministic
+cook assignment and supplier selection. It supports prep before service and
+same-day market hours. Forecasts use comparable weekdays and service periods.
+Waste reduction and profitability need measurement in a real kitchen using
+closing counts and actual financial records.
+
+---
+
+Built for **Best Business Workflow** at Flip the Switch.
+
+Made with [Switch](https://www.switchagents.ai). The Switch mark in the demo
+comes from its [official repository](https://github.com/sandbox-quantum/switch/blob/main/gateway/public/switch_logo_light.svg).
