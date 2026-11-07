@@ -120,13 +120,13 @@ eligibility when new facts change the plan.
 ## Why Switch is central
 
 ```mermaid
-flowchart TB
-    Team["Ravi · Neha · Asha<br/>Updates, decisions, handoffs"]
-    Room["Switch room<br/>Connected to Mattermost"]
-    Agent["Cloudswitch agent<br/>Interpret the update and explain the options"]
-    Planner["Planner + SQLite<br/>Check facts, costs, constraints, and revisions"]
-    Approval["Owner approval in the same thread"]
-    Lists["One approved version<br/>Buying list · Prep schedule · Internal menu"]
+flowchart LR
+    Team["Kitchen team<br/>Ravi · Neha · Asha"]
+    Room["Switch room<br/>Mattermost"]
+    Agent["AI agent<br/>Interpret + explain"]
+    Planner["Planner + SQLite<br/>Calculate + version"]
+    Approval["Owner approval<br/>Same thread"]
+    Lists["Approved lists<br/>Buying · Prep · Menu"]
 
     Team <--> Room
     Room <--> Agent
