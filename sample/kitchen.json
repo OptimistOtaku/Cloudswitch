@@ -1,0 +1,253 @@
+{
+  "synthetic": true,
+  "date": "2026-11-06",
+  "timezone": "Asia/Kolkata",
+  "as_of": "14:00",
+  "service": "dinner",
+  "service_start": "18:00",
+  "service_end": "22:00",
+  "markets": {
+    "main": {
+      "name": "Main Market",
+      "opens": "06:00",
+      "closes": "18:00",
+      "arrival": "15:00",
+      "return_minutes": 30,
+      "trip_cost": 4000
+    },
+    "other": {
+      "name": "East Market",
+      "opens": "08:00",
+      "closes": "17:00",
+      "arrival": "16:30",
+      "return_minutes": 30,
+      "trip_cost": 180000
+    }
+  },
+  "ingredients": {
+    "rice": {
+      "unit": "g",
+      "stock": 3500,
+      "stock_cost_per_g": 6,
+      "use_by": "2026-11-06",
+      "pack_g": 500,
+      "quotes": {
+        "main": {
+          "price_per_g": 6,
+          "available": true
+        },
+        "other": {
+          "price_per_g": 8,
+          "available": true
+        }
+      }
+    },
+    "noodles": {
+      "unit": "g",
+      "stock": 0,
+      "stock_cost_per_g": 9,
+      "use_by": "2026-11-06",
+      "pack_g": 500,
+      "quotes": {
+        "main": {
+          "price_per_g": 9,
+          "available": true
+        },
+        "other": {
+          "price_per_g": 11,
+          "available": true
+        }
+      }
+    },
+    "chilli": {
+      "unit": "g",
+      "stock": 0,
+      "stock_cost_per_g": 30,
+      "use_by": "2026-11-06",
+      "pack_g": 250,
+      "quotes": {
+        "main": {
+          "price_per_g": 30,
+          "available": true
+        },
+        "other": {
+          "price_per_g": 32,
+          "available": null
+        }
+      }
+    },
+    "paneer": {
+      "unit": "g",
+      "stock": 0,
+      "stock_cost_per_g": 35,
+      "use_by": "2026-11-06",
+      "pack_g": 500,
+      "quotes": {
+        "main": {
+          "price_per_g": 35,
+          "available": true
+        },
+        "other": {
+          "price_per_g": 37,
+          "available": true
+        }
+      }
+    },
+    "vegetables": {
+      "unit": "g",
+      "stock": 0,
+      "stock_cost_per_g": 8,
+      "use_by": "2026-11-06",
+      "pack_g": 500,
+      "quotes": {
+        "main": {
+          "price_per_g": 8,
+          "available": true
+        },
+        "other": {
+          "price_per_g": 10,
+          "available": true
+        }
+      }
+    },
+    "sauce": {
+      "unit": "g",
+      "stock": 0,
+      "stock_cost_per_g": 15,
+      "use_by": "2026-11-06",
+      "pack_g": 500,
+      "quotes": {
+        "main": {
+          "price_per_g": 15,
+          "available": true
+        },
+        "other": {
+          "price_per_g": 17,
+          "available": true
+        }
+      }
+    }
+  },
+  "cooks": {
+    "mei": {
+      "skills": [
+        "Chinese"
+      ],
+      "available": false,
+      "start": "16:00",
+      "end": "22:00"
+    },
+    "asha": {
+      "skills": [
+        "Indian"
+      ],
+      "available": true,
+      "start": "16:00",
+      "end": "22:00"
+    }
+  },
+  "dishes": {
+    "chilli-noodles": {
+      "brand": "Wok Street",
+      "skill": "Chinese",
+      "price": 24000,
+      "discount": 1000,
+      "fee": 5000,
+      "packaging": 1500,
+      "batch_size": 6,
+      "batch_minutes": 20,
+      "recipe": {
+        "noodles": 150,
+        "chilli": 15,
+        "vegetables": 100,
+        "sauce": 20
+      },
+      "confirmed": 0,
+      "sample_demand": 12
+    },
+    "fried-rice": {
+      "brand": "Wok Street",
+      "skill": "Chinese",
+      "price": 22000,
+      "discount": 1000,
+      "fee": 5000,
+      "packaging": 1500,
+      "batch_size": 6,
+      "batch_minutes": 20,
+      "recipe": {
+        "rice": 180,
+        "vegetables": 100,
+        "sauce": 20
+      },
+      "confirmed": 0,
+      "sample_demand": 12
+    },
+    "paneer-bowl": {
+      "brand": "Bowl House",
+      "skill": "Indian",
+      "price": 26000,
+      "discount": 1000,
+      "fee": 5000,
+      "packaging": 1500,
+      "batch_size": 6,
+      "batch_minutes": 20,
+      "recipe": {
+        "rice": 180,
+        "paneer": 100,
+        "chilli": 10
+      },
+      "confirmed": 0,
+      "sample_demand": 6
+    },
+    "veg-bowl": {
+      "brand": "Bowl House",
+      "skill": "Indian",
+      "price": 20000,
+      "discount": 1000,
+      "fee": 5000,
+      "packaging": 1500,
+      "batch_size": 6,
+      "batch_minutes": 15,
+      "recipe": {
+        "rice": 180,
+        "vegetables": 150,
+        "chilli": 5
+      },
+      "confirmed": 0,
+      "sample_demand": 6
+    },
+    "paneer-wrap": {
+      "brand": "Bowl House",
+      "skill": "Indian",
+      "price": 23000,
+      "discount": 1000,
+      "fee": 5000,
+      "packaging": 1500,
+      "batch_size": 6,
+      "batch_minutes": 15,
+      "recipe": {
+        "paneer": 100,
+        "vegetables": 80,
+        "chilli": 10
+      },
+      "confirmed": 0,
+      "sample_demand": 6
+    },
+    "veg-wrap": {
+      "brand": "Bowl House",
+      "skill": "Indian",
+      "price": 18000,
+      "discount": 1000,
+      "fee": 5000,
+      "packaging": 1500,
+      "batch_size": 6,
+      "batch_minutes": 15,
+      "recipe": {
+        "vegetables": 180,
+        "sauce": 20
+      },
+      "confirmed": 0,
+      "sample_demand": 6
+    }
+  }
+}

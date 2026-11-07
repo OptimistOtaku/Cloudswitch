@@ -1,0 +1,12 @@
+.env
+*.sqlite*
+__pycache__/
+.venv/
+artifacts/
+data/
+live-*/
+.ruff_cache/
+demo/part-*.mp4
+demo/scene-*.png
+demo/narration.mp3
+demo/cuts.txt

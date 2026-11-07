@@ -1,0 +1,19 @@
+[project]
+name = "kitchen-shift"
+version = "0.1.0"
+description = "A Switch room that keeps cloud-kitchen buying and prep plans feasible"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+kitchen = "kitchen.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["kitchen"]
+
+[tool.setuptools.package-data]
+kitchen = ["*.html"]

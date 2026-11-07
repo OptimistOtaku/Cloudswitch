@@ -1,0 +1,9 @@
+A cloud kitchen has six dishes, two brands, and one difficult dinner shift.
+Kitchen Shift turns order history, stock, market hours, and cook availability into a buying and prep plan.
+The Chinese cook is on leave. Before the buyer leaves, the agent flags the dishes that cannot be prepared.
+Then a real message arrives through Mattermost and Switch. Main Market is out of green chillies. The buyer can reach East Market at four thirty.
+The agent checks the facts. Stock at the second market is unknown, so it asks for confirmation. It proposes a feasible menu with no speculative purchase.
+The team confirms stock and adds eighteen paid paneer bowl orders. Now the emergency trip makes sense for fulfilling those orders. The plan changes: two kilos of paneer, two hundred fifty grams of chillies, and Asha cooking from five until six.
+The owner approves in the same Switch thread. One version updates buying, prep, and the internal menu together.
+This synthetic drill ran through a real model and the real Switch protocol. Projected contribution is visible. Actual waste needs closing counts.
+Kitchen Shift. Give the team a plan they can act on.
