@@ -433,7 +433,7 @@
           draw({
             kind: p.status === "approved" ? "approved" : "proposal",
             proposal_id: p.id,
-            plan: p.result,
+            plan: p.status === "approved" && s.approved ? s.approved : p.result,
           });
         }
       });
